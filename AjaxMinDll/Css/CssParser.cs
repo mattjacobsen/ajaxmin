@@ -2262,6 +2262,7 @@ namespace Microsoft.Ajax.Utilities
                     case TokenType.Not:
                     case TokenType.Any:
                     case TokenType.Matches:
+                    case TokenType.Is:
                         AppendCurrent();
                         SkipSpace();
 

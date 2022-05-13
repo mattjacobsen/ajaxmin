@@ -266,6 +266,9 @@ namespace Microsoft.Ajax.Utilities
 
                     case "MATCHES":
                         return TokenType.Matches;
+                    
+                    case "IS":
+                        return TokenType.Is;
                 }
             }
 
@@ -1169,6 +1172,10 @@ namespace Microsoft.Ajax.Utilities
                     else if (ident.Equals("matches", StringComparison.OrdinalIgnoreCase))
                     {
                         tokenType = TokenType.Matches;
+                    }
+                    else if (ident.Equals("is", StringComparison.OrdinalIgnoreCase))
+                    {
+                        tokenType = TokenType.Is;
                     }
 
                     token = new CssToken(tokenType, ident + '(', m_context);
